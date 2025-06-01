@@ -98,7 +98,7 @@ resource "aws_eks_cluster" "microdegree" {
 
 resource "aws_eks_node_group" "microdegree" {
   cluster_name    = aws_eks_cluster.microdegree.name
-  node_group_name = "microdegree-node-group"
+  node_group_name = "microdegree-node-group-new-1"
   node_role_arn   = aws_iam_role.microdegree_node_group_role.arn
   subnet_ids      = aws_subnet.microdegree_subnet[*].id
 
@@ -141,7 +141,7 @@ resource "aws_iam_role_policy_attachment" "microdegree_cluster_role_policy" {
 }
 
 resource "aws_iam_role" "microdegree_node_group_role" {
-  name = "microdegree-node-group-role"
+  name = "microdegree-node-group-role-new"
 
   assume_role_policy = <<EOF
 {
