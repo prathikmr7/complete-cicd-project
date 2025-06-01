@@ -87,7 +87,7 @@ resource "aws_security_group" "microdegree_node_sg" {
 }
 
 resource "aws_eks_cluster" "microdegree" {
-  name     = "microdegree-cluster"
+  name     = "microdegree-cluster-new"
   role_arn = aws_iam_role.microdegree_cluster_role.arn
 
   vpc_config {
